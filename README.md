@@ -1,3 +1,3 @@
 # vue-challenges
 
-Vue.js projects for learning purposes, inspired by FrontendEval.
+Vue.js projects for learning purposes.
