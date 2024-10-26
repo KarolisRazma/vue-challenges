@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import FaqSection from './components/faq/FaqSection.vue'
+</script>
 
 <template>
-  <div></div>
+  <FaqSection />
 </template>
 
 <style scoped></style>
