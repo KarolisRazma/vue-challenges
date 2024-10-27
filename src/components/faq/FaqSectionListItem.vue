@@ -23,7 +23,9 @@ onBeforeMount(() => {
     <div class="faq-item-question">
       {{ props.question }}
     </div>
-    <div v-if="isActive" class="faq-item-answer">{{ props.answer }}</div>
+    <Transition name="slide-fade" appear>
+      <div v-if="isActive" class="faq-item-answer">{{ props.answer }}</div>
+    </Transition>
   </div>
 </template>
 
@@ -55,5 +57,19 @@ onBeforeMount(() => {
 .faq-item-answer {
   padding: 5px;
   font-weight: 400;
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease-out;
+}
+
+.slide-fade-leave-active {
+  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
 }
 </style>
